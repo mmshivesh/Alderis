@@ -47,7 +47,6 @@ open class ColorPickerViewController: UIViewController {
 		super.viewDidLoad()
 
 		navigationController?.isNavigationBarHidden = true
-		view.backgroundColor = UIColor(white: 0, alpha: 0.2)
 
 		let containerView = UIView()
 		containerView.translatesAutoresizingMaskIntoConstraints = false
@@ -56,12 +55,8 @@ open class ColorPickerViewController: UIViewController {
 		backgroundView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
 		backgroundView.translatesAutoresizingMaskIntoConstraints = false
 		backgroundView.clipsToBounds = true
-		if #available(iOS 13, *) {
-			backgroundView.layer.cornerRadius = 13
-			backgroundView.layer.cornerCurve = .continuous
-		} else {
-			backgroundView._continuousCornerRadius = 13
-		}
+        backgroundView.layer.cornerRadius = 13
+        backgroundView.layer.cornerCurve = .continuous
 		containerView.addSubview(backgroundView)
 
 		innerViewController = ColorPickerInnerViewController()
@@ -72,12 +67,8 @@ open class ColorPickerViewController: UIViewController {
 		addChild(innerViewController)
 		innerViewController.view.translatesAutoresizingMaskIntoConstraints = false
 		innerViewController.view.clipsToBounds = true
-		if #available(iOS 13, *) {
-			innerViewController.view.layer.cornerRadius = 13
-			innerViewController.view.layer.cornerCurve = .continuous
-		} else {
-			innerViewController.view._continuousCornerRadius = 13
-		}
+        innerViewController.view.layer.cornerRadius = 13
+        innerViewController.view.layer.cornerCurve = .continuous
 		containerView.addSubview(innerViewController.view)
 
 		var layoutGuide = view as LayoutGuide
@@ -121,13 +112,6 @@ open class ColorPickerViewController: UIViewController {
 
 	override open func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
-
-		if animated {
-			view.backgroundColor = view.backgroundColor!.withAlphaComponent(0)
-			UIView.animate(withDuration: 0.3) {
-				self.view.backgroundColor = self.view.backgroundColor!.withAlphaComponent(0.2)
-			}
-		}
 	}
 
 	override open func viewDidAppear(_ animated: Bool) {
@@ -144,12 +128,6 @@ open class ColorPickerViewController: UIViewController {
 		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
 		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
 		NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
-
-		if animated {
-			UIView.animate(withDuration: 0.3) {
-				self.view.backgroundColor = self.view.backgroundColor!.withAlphaComponent(0)
-			}
-		}
 	}
 
 	@objc private func keyboardFrameWillChange(_ notification: Notification) {
