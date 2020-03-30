@@ -11,20 +11,34 @@ import UIKit
 class ColorPickerSwatchViewController: UIViewController, ColorPickerTabProtocol {
 
 	static let colorSwatch = [
-		[
-			UIColor(red: 1,        green: 1,        blue: 1,        alpha: 1),
-			UIColor(red: 0.921569, green: 0.921569, blue: 0.921569, alpha: 1),
-			UIColor(red: 0.839216, green: 0.839216, blue: 0.839216, alpha: 1),
-			UIColor(red: 0.760784, green: 0.760784, blue: 0.760784, alpha: 1),
-			UIColor(red: 0.678431, green: 0.678431, blue: 0.678431, alpha: 1),
-			UIColor(red: 0.6,      green: 0.6,      blue: 0.6,      alpha: 1),
-			UIColor(red: 0.521569, green: 0.521569, blue: 0.521569, alpha: 1),
-			UIColor(red: 0.439216, green: 0.439216, blue: 0.439216, alpha: 1),
-			UIColor(red: 0.360784, green: 0.360784, blue: 0.360784, alpha: 1),
-			UIColor(red: 0.278431, green: 0.278431, blue: 0.278431, alpha: 1),
-			UIColor(red: 0.2,      green: 0.2,      blue: 0.2,      alpha: 1),
-			UIColor(red: 0,        green: 0,        blue: 0,        alpha: 1),
-		],
+        [
+            .systemTeal,
+            .systemBlue,
+            .systemIndigo,
+            .systemPurple,
+            .systemPink,
+            .systemRed,
+            .systemOrange,
+            .systemYellow,
+            .systemGreen,
+            .white,
+            .systemGray3,
+            .black
+        ],
+//		[
+//			UIColor(red: 1,        green: 1,        blue: 1,        alpha: 1),
+//			UIColor(red: 0.921569, green: 0.921569, blue: 0.921569, alpha: 1),
+//			UIColor(red: 0.839216, green: 0.839216, blue: 0.839216, alpha: 1),
+//			UIColor(red: 0.760784, green: 0.760784, blue: 0.760784, alpha: 1),
+//			UIColor(red: 0.678431, green: 0.678431, blue: 0.678431, alpha: 1),
+//			UIColor(red: 0.6,      green: 0.6,      blue: 0.6,      alpha: 1),
+//			UIColor(red: 0.521569, green: 0.521569, blue: 0.521569, alpha: 1),
+//			UIColor(red: 0.439216, green: 0.439216, blue: 0.439216, alpha: 1),
+//			UIColor(red: 0.360784, green: 0.360784, blue: 0.360784, alpha: 1),
+//			UIColor(red: 0.278431, green: 0.278431, blue: 0.278431, alpha: 1),
+//			UIColor(red: 0.2,      green: 0.2,      blue: 0.2,      alpha: 1),
+//			UIColor(red: 0,        green: 0,        blue: 0,        alpha: 1),
+//		],
 		[
 			UIColor(red: 0,        green: 0.215686, blue: 0.290196, alpha: 1),
 			UIColor(red: 0.00392157, green: 0.113725, blue: 0.341176, alpha: 1),

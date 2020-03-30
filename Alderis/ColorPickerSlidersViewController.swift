@@ -341,10 +341,6 @@ extension ColorPickerSlidersViewController: UITextFieldDelegate {
 				// User is probably still typing it out. Don’t do anything yet.
 				return true
 			}
-
-			guard let color = UIColor(hbcp_propertyListValue: newString) else {
-				return true
-			}
 			_color = color
 			rawColor = RawColor(color)
 			colorPickerDelegate.colorPicker(didSelectColor: color)
