@@ -1,3 +1,8 @@
+# Changes
+
+* Removed the background shadow when the picker is shown
+* Replaced most shades of gray with iOS system colors
+
 # Alderis
 Alderis is a replacement for libcolorpicker, and a reusable color picker component (even usable in App Store apps - no private API use!). You can install it in place of libcolorpicker as a user, or swap over your package dependencies if you’re a developer.
 
